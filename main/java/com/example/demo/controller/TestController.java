@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping("test")
 
 public class TestController {
+
 @GetMapping
-	public String testController(){
+public String testController(){
 	return "Hello World!( 안녕하세요!)";
 }
 
