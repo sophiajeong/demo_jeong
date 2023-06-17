@@ -1,18 +1,31 @@
 package com.example.demo.dto;
 
-import java.util.List;
+public class TestRequestBodyDTO {
+    private int id;
+    private String message;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+    public TestRequestBodyDTO() {}
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-public class ResponseDTO<T>{
+    public TestRequestBodyDTO(int id, String message) {
+        this.id = id;
+        this.message = message;
+    }
 
-	private String error;
-	private List<T> data;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    // remember to add equals, hashCode and toString if you need them
 }
